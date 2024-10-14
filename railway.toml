@@ -1,0 +1,15 @@
+[service]
+name = "my-service"  # Ubah ini dengan nama service kamu
+
+[build]
+  # Railway secara otomatis akan mengenali project Node.js dan menjalankan `npm install`
+  # Jika menggunakan package manager lain seperti Yarn atau pnpm, bisa ditambahkan di sini
+  command = "npm install"
+
+[start]
+  # Railway akan menggunakan perintah ini untuk memulai service
+  command = "npm start"
+
+[deploy]
+  # Railway akan melakukan deploy setiap ada perubahan di branch yang ditentukan
+  branch = "mster"  # Ganti dengan nama branch utama kamu jika berbeda
